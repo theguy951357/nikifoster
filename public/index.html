@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <title>Law & Writing Site</title>
+
+    <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/11.10.0/firebase-app-compat.js"></script>
@@ -39,13 +43,50 @@
     </style>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <header>
+      <h1>Law Office of Niki Foster</h1>
+      <p>Empowering Justice. Telling Stories.</p>
+    </header>
+  
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Legal Services</a>
+      <a href="#">About</a>
+      <a href="#">Book</a>
+      <a href="#">Contact</a>
+    </nav>
+  
+    <section class="hero">
+      <h2>Meet Jane Doe</h2>
+      <p>Attorney. Advocate. Author.</p>
+      <button class="button">Read the Book</button>
+    </section>
+  
+    <section class="section aboutmesize">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>I’ve spent over a decade representing those who’ve been overlooked or mistreated. My mission is to make justice accessible and transparent—and that mission extends to my writing.</p>
+      </div>
+    </section>
+  
+    <section class="section resultssize">
+      <h2>Case Results</h2>
+      <div class="card">
+        <p>Over $5 million recovered for clients in civil rights cases.</p>
+      </div>
+    </section>
+  
+    <section class="section">
+      <h2>About the Book</h2>
+      <div class="card">
+        <p><strong>\"Beneath the Gavel\"</strong> is a gripping memoir and legal guide that unveils the personal side of advocacy. Available now in hardcover and eBook.</p>
+        <button class="button">Buy Now</button>
+      </div>
+    </section>
+  
+    <footer class="footer">
+      <p>&copy; 2025 Law Office of Jane Doe. All rights reserved.</p>
+    </footer>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {

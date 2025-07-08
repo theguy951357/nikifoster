@@ -1,0 +1,72 @@
+/* Responsive Design */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .aboutmesize {
+      height: 115em;
+    }
+    .resultssize {
+      height: 15em;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .section {
+      padding: 3rem;
+    }
+    .hero {
+      padding: 4rem 2rem;
+    }
+    .aboutmesize {
+      height: 110em;
+    }
+    .resultssize {
+      height: 10em;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .aboutmesize {
+      height: 110em;
+    }
+    .resultssize {
+      height: 10em;
+    }
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    nav {
+      justify-content: flex-end;
+      padding-right: 2rem;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+    .aboutmesize {
+      height: 105em;
+    }
+    .resultssize {
+      height: 10em;
+    }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .aboutmesize {
+      height: 105em;
+    }
+    .resultssize {
+      height: 10em;
+    }
+  }
+  
