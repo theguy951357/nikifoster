@@ -28,77 +28,102 @@
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    
   </head>
   <body>
-    <header>
-      <h1>Law Office of Niki Foster</h1>
-      <p>Empowering Justice. Telling Stories.</p>
-    </header>
-  
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Legal Services</a>
-      <a href="#">About</a>
-      <a href="#">Book</a>
-      <a href="#">Contact</a>
-    </nav>
-  
-    <section class="hero">
-      <h2>Meet Jane Doe</h2>
-      <p>Attorney. Advocate. Author.</p>
-      <button class="button">Read the Book</button>
-    </section>
-  
-    <section class="section aboutmesize">
-      <h2>About Me</h2>
-      <div class="card">
-        <p>
-          I’m an attorney dedicated to making legal services more accessible, affordable, and empowering especially for those navigating the system alone. Through my <strong>unbundled law practice</strong>, I provide <strong>limited scope representation</strong> tailored to the specific needs of clients who prefer more control over their legal journey.
-        </p>
-        <p>
-          Whether you're facing a divorce, landlord dispute, custody issue, or small claims matter, you shouldn't have to choose between going it completely alone or spending thousands on full legal representation. That's why I offer <strong>Pro Se support</strong> — step-by-step legal guidance designed to help <strong>unrepresented parties</strong> advocate for themselves effectively and confidently.
-        </p>
-        <p>
-          My goal is simple: to help people feel equipped, not overwhelmed. I’ve worked with countless individuals who just needed the right tools, advice, and confidence to present their case. With <strong>unbundled legal services</strong>, I can support you where it matters most — drafting documents, preparing you for court, or reviewing agreements — while you stay in control of your case and your budget.
-        </p>
-        <p>
-          If you're looking for an attorney who understands the power of strategic, affordable, and limited legal help, I invite you to reach out. Together, we can make sure your voice is heard — whether you're working <strong>Pro Se</strong> or just need help with specific parts of your legal matter.
-        </p>
-      </div>
-    </section>
-  
-    <section class="section resultssize">
-      <h2>Case Results</h2>
-      <div class="card">
-        <p>Over $5 million recovered for clients in civil rights cases.</p>
-      </div>
-    </section>
-  
-    <section class="section">
-      <h2>About the Book</h2>
-      <div class="card">
-        <p><strong>\"Beneath the Gavel\"</strong> is a gripping memoir and legal guide that unveils the personal side of advocacy. Available now in hardcover and eBook.</p>
-        <button class="button">Buy Now</button>
-      </div>
-    </section>
-  
-    <footer class="footer">
-      <p>&copy; 2025 Law Office of Jane Doe. All rights reserved.</p>
-    </footer>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Niki Foster</b> Law</a>
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#services" class="w3-bar-item w3-button">Services</a>
+      <a href="#book" class="w3-bar-item w3-button">Book</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px; margin-top:80px;" id="home">
+  <img class="w3-image" src="/w3images/architect.jpg" alt="Law Office" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white">
+      <span class="w3-padding w3-black w3-opacity-min"><b>Niki Foster</b></span>
+      <span class="w3-hide-small w3-text-light-grey">Legal Services</span>
+    </h1>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="w3-container w3-center w3-padding-64 hero" >
+  <h2 class="w3-xxxlarge" style="color: var(--indigo);">Affordable. Strategic. Empowering.</h2>
+  <p class="w3-large w3-opacity"><strong>Legal guidance for those representing themselves.</strong></p>
+  <a href="#contact" class="w3-button w3-margin-top w3-padding-large" style="background-color: var(--pink); color: var(--text-on-pink);">Schedule a Consultation</a>
+</section>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <div class="card">
+      <p>
+        I’m Niki Foster, an attorney dedicated to making legal services more accessible, affordable, and empowering — especially for those navigating the system alone. Through my <strong>unbundled law practice</strong>, I provide <strong>limited scope representation</strong> tailored to the specific needs of clients who prefer more control over their legal journey.
+      </p>
+      <p>
+        Whether you're facing a divorce, landlord dispute, custody issue, or small claims matter, you shouldn't have to choose between going it completely alone or spending thousands on full legal representation. That's why I offer <strong>Pro Se support</strong> — step-by-step legal guidance designed to help <strong>unrepresented parties</strong> advocate for themselves effectively and confidently.
+      </p>
+      <p>
+        My goal is simple: to help people feel equipped, not overwhelmed. I’ve worked with countless individuals who just needed the right tools, advice, and confidence to present their case. With <strong>unbundled legal services</strong>, I can support you where it matters most — drafting documents, preparing you for court, or reviewing agreements — while you stay in control of your case and your budget.
+      </p>
+      <p>
+        If you're looking for an attorney who understands the power of strategic, affordable, and limited legal help, I invite you to reach out. Together, we can make sure your voice is heard — whether you're working <strong>Pro Se</strong> or just need help with specific parts of your legal matter.
+      </p>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div class="w3-container w3-padding-32" id="services">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Legal Services</h3>
+    <div class="card">
+      <p>I offer strategic assistance in areas including family law, housing, contracts, and small claims. My <strong>limited scope representation</strong> model allows you to choose exactly the support you need, when you need it most.</p>
+    </div>
+  </div>
+
+  <!-- Book Section -->
+  <div class="w3-container w3-padding-32" id="book">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Book</h3>
+    <div class="card">
+      <p><strong>"Beneath the Gavel"</strong> is a memoir and legal resource written for everyday people facing the legal system without full representation. It's a practical, compassionate guide for <strong>Pro Se litigants</strong> and <strong>unrepresented parties</strong>.</p>
+      <button class="button">Buy Now</button>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <form action="#" method="post">
+      <input class="w3-input w3-border" type="text" placeholder="Name" name="name" required>
+      <input class="w3-input w3-section w3-border" type="email" placeholder="Email" name="email" required>
+      <textarea class="w3-input w3-section w3-border" placeholder="Message" name="message" required></textarea>
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+
+  <!-- Map (Optional) -->
+  <div class="w3-container">
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%" alt="Map">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Website by <a href="https://www.w3schools.com/w3css/" title="W3.CSS" target="_blank" class="w3-hover-text-pink">w3.css</a></p>
+</footer>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
