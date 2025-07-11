@@ -82,3 +82,10 @@ nav a:hover {
   text-align: center;
   padding: 2rem 1rem;
 }
+
+.about-paragraph {
+    margin-bottom: 1.5em;
+    margin-left: 1.5em;
+    line-height: 1.7;
+  }
+  

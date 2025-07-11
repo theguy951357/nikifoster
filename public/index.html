@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Law & Writing Site</title>
+    <title>Law Office of Niki Foster</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="css/colors.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -34,7 +36,7 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>Niki Foster</b> Law</a>
+    <a href="#home" class="w3-bar-item w3-button">Law Office of <b>Niki Foster</b></a>
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">About</a>
       <a href="#services" class="w3-bar-item w3-button">Services</a>
@@ -44,22 +46,11 @@
   </div>
 </div>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px; margin-top:80px;" id="home">
-  <img class="w3-image" src="/w3images/architect.jpg" alt="Law Office" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white">
-      <span class="w3-padding w3-black w3-opacity-min"><b>Niki Foster</b></span>
-      <span class="w3-hide-small w3-text-light-grey">Legal Services</span>
-    </h1>
-  </div>
-</header>
-
 <!-- Hero Section -->
-<section class="w3-container w3-center w3-padding-64 hero" >
+<section class="hero">
   <h2 class="w3-xxxlarge">Affordable. Strategic. Empowering.</h2>
   <p class="w3-large w3-opacity"><strong>Legal guidance for those representing themselves.</strong></p>
-  <a href="#contact" class="w3-button w3-margin-top w3-padding-large" style="background-color: var(--pink); color: var(--text-on-pink);">Schedule a Consultation</a>
+  <a href="#contact" class="button">Schedule a Consultation</a>
 </section>
 
 <!-- Page content -->
@@ -69,17 +60,24 @@
   <div class="w3-container w3-padding-32" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
     <div class="card">
-      <p>
-        I’m Niki Foster, an attorney dedicated to making legal services more accessible, affordable, and empowering — especially for those navigating the system alone. Through my <strong>unbundled law practice</strong>, I provide <strong>limited scope representation</strong> tailored to the specific needs of clients who prefer more control over their legal journey.
+      <p class="about-paragraph">
+        I’m Niki Foster, an attorney dedicated to making legal services more accessible and empowering for those navigating the civil legal system alone. My practice centers on unbundled legal services and limited scope representation, designed specifically to support pro se litigants.
       </p>
-      <p>
-        Whether you're facing a divorce, landlord dispute, custody issue, or small claims matter, you shouldn't have to choose between going it completely alone or spending thousands on full legal representation. That's why I offer <strong>Pro Se support</strong> — step-by-step legal guidance designed to help <strong>unrepresented parties</strong> advocate for themselves effectively and confidently.
+      <img src="./images/nikifoster2.jpg" alt="Niki Foster 1" style="width:50%">
+    </div>
+    <div class="card">
+      <p class="about-paragraph">
+        I assist unrepresented individuals behind the scenes throughout North Carolina. That includes drafting motions, pleadings, discovery responses, and participating in settlement negotiations, all without appearing as counsel of record.
       </p>
-      <p>
-        My goal is simple: to help people feel equipped, not overwhelmed. I’ve worked with countless individuals who just needed the right tools, advice, and confidence to present their case. With <strong>unbundled legal services</strong>, I can support you where it matters most — drafting documents, preparing you for court, or reviewing agreements — while you stay in control of your case and your budget.
+    </div>
+    <div class="card">
+      <p class="about-paragraph">
+        Whether you’re involved in a divorce, housing dispute, custody matter, or small claims case, my goal is to help you feel equipped and informed, not overwhelmed. You can get high-quality legal guidance without having to pay a large retainer.
       </p>
-      <p>
-        If you're looking for an attorney who understands the power of strategic, affordable, and limited legal help, I invite you to reach out. Together, we can make sure your voice is heard — whether you're working <strong>Pro Se</strong> or just need help with specific parts of your legal matter.
+    </div>
+    <div class="card">
+      <p class="about-paragraph">
+        I offer legal help on a flat-fee, case-by-case basis with no upfront commitment. The initial consultation is free, and we’ll determine what level of support best fits your needs.
       </p>
     </div>
   </div>
@@ -88,7 +86,8 @@
   <div class="w3-container w3-padding-32" id="services">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Legal Services</h3>
     <div class="card">
-      <p>I offer strategic assistance in areas including family law, housing, contracts, and small claims. My <strong>limited scope representation</strong> model allows you to choose exactly the support you need, when you need it most.</p>
+      <p>I offer strategic assistance in areas including family law, housing, contracts, and small claims. My limited scope representation model allows you to choose exactly the support you need, when you need it most.</p>
+      <img src="./images/nikifoster1.jpg" alt="Niki Foster 1" style="width:50%">
     </div>
   </div>
 
@@ -96,33 +95,32 @@
   <div class="w3-container w3-padding-32" id="book">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Book</h3>
     <div class="card">
-      <p><strong>"Beneath the Gavel"</strong> is a memoir and legal resource written for everyday people facing the legal system without full representation. It's a practical, compassionate guide for <strong>Pro Se litigants</strong> and <strong>unrepresented parties</strong>.</p>
-      <button class="button">Buy Now</button>
+      <p><strong>"Beneath the Gavel"</strong> blah blah blah this is placeholder text blah blah blah this is placeholder text blah blah blah this is placeholder text blah blah blah this is placeholder text blah blah blah this is placeholder text</p>
+      <img src="./images/nikifoster3.jpg" alt="Niki Foster 3" style="width:50%">
     </div>
   </div>
 
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-32" id="contact">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-    <form action="#" method="post">
-      <input class="w3-input w3-border" type="text" placeholder="Name" name="name" required>
-      <input class="w3-input w3-section w3-border" type="email" placeholder="Email" name="email" required>
-      <textarea class="w3-input w3-section w3-border" placeholder="Message" name="message" required></textarea>
-      <button class="w3-button w3-black w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-      </button>
-    </form>
-  </div>
-
-  <!-- Map (Optional) -->
-  <div class="w3-container">
-    <img src="/w3images/map.jpg" class="w3-image" style="width:100%" alt="Map">
+<!-- Contact Section -->
+<div class="w3-container w3-padding-32" id="contact">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+  <div class="card w3-margin-bottom">
+    <p class="about-paragraph">
+      <strong>Law Office of Niki Foster</strong><br>
+      Post Office Box 1065<br>
+      Asheville, NC 28802-2880<br><br>
+      
+      <strong>Email:</strong> <a href="mailto:nikifosterlaw@gmail.com">nikifosterlaw@gmail.com</a><br>
+      <strong>Phone:</strong> <a href="tel:+8284076588">(828) 407-6588</a>
+    </p>
   </div>
 </div>
 
+
+  
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
-  <p>Website by <a href="https://www.w3schools.com/w3css/" title="W3.CSS" target="_blank" class="w3-hover-text-pink">w3.css</a></p>
+  <p>Website by <a href="https://www.crispspicestudios.com" title="Crispspice Studios" target="_blank" class="w3-hover-text-pink"><img src="./images/icononly_transparent.png" style="height: 30px;"> Crispspice Studios</a></p>
 </footer>
 
     <script>
