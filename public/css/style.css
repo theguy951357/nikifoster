@@ -16,28 +16,6 @@ header {
   text-align: center;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding: 0.5rem;
-  background: var(--bg-light);
-}
-
-nav a {
-  color: var(--indigo);
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom: 2px solid transparent;
-  padding: 0.25rem 0.5rem;
-}
-
-nav a:hover {
-  border-color: var(--pink);
-  color: var(--pink);
-}
-
 .hero {
   background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
   color: var(--text-light);
@@ -54,6 +32,7 @@ nav a:hover {
   font-size: 1rem;
   cursor: pointer;
   margin-top: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
@@ -74,6 +53,8 @@ nav a:hover {
   background: #fafafa;
   padding: 1rem;
   margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .footer {
@@ -84,8 +65,100 @@ nav a:hover {
 }
 
 .about-paragraph {
-    margin-bottom: 1.5em;
-    margin-left: 1.5em;
-    line-height: 1.7;
+  margin-bottom: 1.5em;
+  margin-left: 1.5em;
+  line-height: 1.7;
+}
+
+.logo {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto 1em auto;
+}
+
+h3 {
+  color: var(--purple);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 2px solid var(--blue);
+  padding: 0.75rem;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: var(--pink);
+  outline: none;
+}
+
+.w3-button.w3-black {
+  background-color: var(--purple);
+  color: var(--text-on-purple);
+}
+
+.w3-button.w3-black:hover {
+  background-color: var(--hover-purple);
+}
+
+footer a {
+  color: var(--light-blue);
+}
+
+footer a:hover {
+  color: var(--hover-light-blue);
+}
+
+/* Color enhancements */
+.card:nth-child(odd) {
+  border-left-color: var(--light-blue);
+}
+
+.card:nth-child(even) {
+  border-left-color: var(--blue);
+}
+
+textarea,
+input[type="text"],
+input[type="email"] {
+  background-color: #f0f8ff;
+}
+
+h3, h4 {
+  border-left: 5px solid var(--light-blue);
+  padding-left: 0.5rem;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, var(--pink), var(--purple), var(--blue));
+  margin: 2rem 0;
+}
+
+/* Parallax Section */
+.parallax {
+    background-image: url('../images/lawpic.jpg');
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem 0;
   }
-  
+
+  .parallax2 {
+    background-image: url('../images/lawpic2.jpg');
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem 0;
+  }

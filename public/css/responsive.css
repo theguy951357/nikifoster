@@ -8,6 +8,10 @@
     .resultssize {
       height: 15em;
     }
+
+    .nikiimage {
+        width: 75%;
+    }
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -24,6 +28,9 @@
     .resultssize {
       height: 10em;
     }
+    .nikiimage {
+        width: 75%;
+    }
   }
   
   /* Medium devices (landscape tablets, 768px and up) */
@@ -33,6 +40,9 @@
     }
     .resultssize {
       height: 10em;
+    }
+    .nikiimage {
+        width: 50%;
     }
   }
   
@@ -54,6 +64,9 @@
     .resultssize {
       height: 10em;
     }
+    .nikiimage {
+        width: 50%;
+    }
   }
   
   /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -67,6 +80,10 @@
     }
     .resultssize {
       height: 10em;
+    }
+
+    .nikiimage {
+        width: 50%;
     }
   }
   
