@@ -144,7 +144,7 @@ hr {
 
 /* Parallax Section */
 .parallax {
-    background-image: url('../images/lawpic.jpg');
+    background-image: url('../images/nikifoster1.jpg');
     min-height: 400px;
     background-attachment: fixed;
     background-position: center;
@@ -154,7 +154,7 @@ hr {
   }
 
   .parallax2 {
-    background-image: url('../images/lawpic2.jpg');
+    background-image: url('../images/nikifoster3.jpg');
     min-height: 400px;
     background-attachment: fixed;
     background-position: center;
