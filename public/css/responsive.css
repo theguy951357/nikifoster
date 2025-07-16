@@ -12,6 +12,11 @@
     .nikiimage {
         width: 75%;
     }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -43,6 +48,14 @@
     }
     .nikiimage {
         width: 50%;
+    }
+  }
+
+  /* for tablets and landscape phones 992px and down */
+  @media only screen and (max-width: 992px) {
+    .card{
+        display: flex;
+        flex-direction: column;
     }
   }
   

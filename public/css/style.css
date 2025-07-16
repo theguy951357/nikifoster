@@ -49,13 +49,20 @@ header {
 }
 
 .card {
-  border-left: 4px solid var(--pink);
-  background: #fafafa;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
+    border-left: 4px solid var(--pink);
+    background: #fafafa;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    gap: 1rem;
+  }
+  
+  .card p {
+    margin: 0;
+    line-height: 1.75;
+    font-size: 1.05rem;
+  }
 
 .footer {
   background-color: var(--indigo);
@@ -65,11 +72,12 @@ header {
 }
 
 .about-paragraph {
-  margin-bottom: 1.5em;
-  margin-left: 1.5em;
-  line-height: 1.7;
-}
-
+    margin: 0 0 1rem 0;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    width: 100%;
+  }
+  
 .logo {
   max-width: 300px;
   display: block;
@@ -162,3 +170,11 @@ hr {
     background-size: cover;
     margin: 2rem 0;
   }
+
+  .nikiimage {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    align-self: center;
+  }
+  
