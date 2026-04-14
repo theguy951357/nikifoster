@@ -17,7 +17,7 @@ header {
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+  background: linear-gradient(135deg, var(--purple), var(--bg-light), var(--bg-light));
   color: var(--text-light);
   text-align: center;
   padding: 3rem 1rem;
