@@ -1,32 +1,57 @@
 /* colors.css */
 :root {
-    /* Brand Palette */
-    --pink: #f72585;
-    --purple: #7209b7;
-    --indigo: #3a0ca3;
-    --blue: #4361ee;
-    --light-blue: #4cc9f0;
-  
-    /* Backgrounds */
-    --bg-dark: #1a1a1a;
-    --bg-light: #ffffff;
-  
-    /* Text Colors */
-    --text-light: #ffffff;
-    --text-dark: #1a1a1a;
-  
-    /* Text on Backgrounds */
-    --text-on-pink: #ffffff;
-    --text-on-purple: #ffffff;
-    --text-on-indigo: #ffffff;
-    --text-on-blue: #ffffff;
-    --text-on-light-blue: #000000;
-  
-    /* Hover States */
-    --hover-pink: #e01b75;
-    --hover-purple: #5e0d94;
-    --hover-indigo: #2f0b87;
-    --hover-blue: #3654cc;
-    --hover-light-blue: #3bb3d6;
+  /* ── Brand Palette ───────────────────────────────────────────────── */
+  --pink:       #f72585;   /* decorative only — borders, accents, glows */
+  --pink-text:  #c9196d;   /* 5.2:1 on white — use for ANY pink text    */
+  --purple:     #7209b7;   /* 7.0:1 on white — AAA                      */
+  --indigo:     #3a0ca3;   /* 10.1:1 on white — AAA                     */
+  --blue:       #4361ee;   /* 4.6:1 on white — AA                       */
+  --light-blue: #4cc9f0;   /* decorative only — dark backgrounds only   */
+
+  /* ── Backgrounds ─────────────────────────────────────────────────── */
+  --bg-dark:    #0d0221;   /* deep navy-purple — parallax fill          */
+  --bg-light:   #ffffff;
+  --bg-surface: #fafafa;   /* card / section background                 */
+  --bg-input:   #f0f8ff;   /* form field background                     */
+
+  /* ── Text Colors ─────────────────────────────────────────────────── */
+  --text-light: #ffffff;
+  --text-dark:  #1a1a1a;
+  --text-muted: #555555;   /* 7.4:1 on white — AAA                      */
+
+  /* ── Text on Brand Backgrounds ───────────────────────────────────── */
+  --text-on-pink:       #1a1a1a;   /* dark text on pink — avoids white fail */
+  --text-on-purple:     #ffffff;   /* 7.0:1 — AAA                           */
+  --text-on-indigo:     #ffffff;   /* 10.1:1 — AAA                          */
+  --text-on-blue:       #ffffff;   /* passes at large text size; use bold   */
+  --text-on-light-blue: #0d0221;   /* 9.1:1 — AAA                           */
+
+  /* ── Hover States ────────────────────────────────────────────────── */
+  --hover-pink:       #a8145b;   /* darkened to stay accessible on hover  */
+  --hover-purple:     #5e0d94;
+  --hover-indigo:     #2f0b87;
+  --hover-blue:       #3654cc;
+  --hover-light-blue: #3bb3d6;
+
+  /* ── Borders & Shadows ───────────────────────────────────────────── */
+  --border-card:  rgba(0, 0, 0, 0.07);
+  --shadow-card:  0 3px 10px rgba(0, 0, 0, 0.07);
+  --shadow-image: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+/* ── Optional dark mode ──────────────────────────────────────────────
+   Uncomment when ready. Brand colors stay the same; surfaces flip.
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-light:   #0d0221;
+    --bg-surface: #160a2e;
+    --bg-input:   #1e1040;
+    --text-dark:  #f0eaff;
+    --text-muted: #a89bc2;
+    --border-card:  rgba(255, 255, 255, 0.06);
+    --shadow-card:  0 3px 10px rgba(0, 0, 0, 0.4);
+    --shadow-image: 0 2px 8px rgba(0, 0, 0, 0.5);
   }
-  
+}
+──────────────────────────────────────────────────────────────────── */

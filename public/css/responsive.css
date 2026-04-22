@@ -1,102 +1,129 @@
 /* Responsive Design */
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .aboutmesize {
-      height: 115em;
-    }
-    .resultssize {
-      height: 15em;
-    }
-
-    .nikiimage {
-        width: 75%;
-    }
-
-    .card{
-        display: flex;
-        flex-direction: column;
-    }
-  }
-  
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
-    .section {
-      padding: 3rem;
-    }
-    .hero {
-      padding: 4rem 2rem;
-    }
-    .aboutmesize {
-      height: 110em;
-    }
-    .resultssize {
-      height: 10em;
-    }
-    .nikiimage {
-        width: 75%;
-    }
-  }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    .aboutmesize {
-      height: 110em;
-    }
-    .resultssize {
-      height: 10em;
-    }
-    .nikiimage {
-        width: 50%;
-    }
+/* ─── Phone (up to 599px) ─────────────────────────────────────────── */
+@media only screen and (max-width: 599px) {
+  .nikiimage {
+    width: 85%;
   }
 
-  /* for tablets and landscape phones 992px and down */
-  @media only screen and (max-width: 992px) {
-    .card{
-        display: flex;
-        flex-direction: column;
-    }
+  .card {
+    display: flex;
+    flex-direction: column;
   }
-  
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    nav {
-      justify-content: flex-end;
-      padding-right: 2rem;
-    }
-    .card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 2rem;
-    }
-    .aboutmesize {
-      height: 105em;
-    }
-    .resultssize {
-      height: 10em;
-    }
-    .nikiimage {
-        width: 50%;
-    }
-  }
-  
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    .section {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .aboutmesize {
-      height: 105em;
-    }
-    .resultssize {
-      height: 10em;
-    }
 
-    .nikiimage {
-        width: 50%;
-    }
+  .logo {
+    max-width: 100%;
   }
-  
+
+  /* Mobile: stacked logo, scroll (not fixed) — iOS Safari fix */
+  .parallax {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(114, 9, 183, 0.08)),
+      url('../images/foster_law_mobile_stacked.svg');
+    background-attachment: scroll;
+    background-size: contain;
+    background-color: #f5f0ff;
+    min-height: 420px;
+  }
+}
+
+/* ─── Small tablets / large phones (600px–767px) ──────────────────── */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .section {
+    padding: 3rem;
+  }
+
+  .hero {
+    padding: 4rem 2rem;
+  }
+
+  .nikiimage {
+    width: 75%;
+  }
+
+  .logo {
+    max-width: 90%;
+  }
+
+  /* Still use stacked logo on small tablets, scroll for safety */
+  .parallax {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(114, 9, 183, 0.08)),
+      url('../images/foster_law_mobile_stacked.svg');
+    background-attachment: scroll;
+    background-size: contain;
+    background-color: #f5f0ff;
+  }
+}
+
+/* ─── Landscape tablets (768px–991px) ────────────────────────────── */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .nikiimage {
+    width: 50%;
+  }
+
+  .logo {
+    max-width: 75%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Switch to horizontal logo at tablet width */
+  .parallax {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(114, 9, 183, 0.08)),
+      url('../images/foster_law_full_logo.svg');
+    background-attachment: scroll;
+    background-size: contain;
+    background-color: #f5f0ff;
+  }
+}
+
+/* ─── Laptops / desktops (992px and up) ──────────────────────────── */
+@media only screen and (min-width: 992px) {
+  nav {
+    justify-content: flex-end;
+    padding-right: 2rem;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .nikiimage {
+    width: 40%;
+  }
+
+  .logo {
+    max-width: 60%;
+  }
+
+  /* Desktop: full logo, true parallax fixed scroll */
+  .parallax {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(114, 9, 183, 0.08)),
+      url('../images/foster_law_full_logo.svg');
+    background-attachment: fixed;
+    background-size: contain;
+    background-color: #f5f0ff;
+    min-height: 500px;
+  }
+}
+
+/* ─── Large desktops (1200px and up) ─────────────────────────────── */
+@media only screen and (min-width: 1200px) {
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .nikiimage {
+    width: 35%;
+  }
+}
