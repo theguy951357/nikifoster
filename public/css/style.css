@@ -23,6 +23,13 @@ header {
   padding: 3rem 1rem;
 }
 
+.hero-tagline {
+  color: var(--indigo);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
 .button {
   background-color: var(--pink);
   color: var(--text-on-pink);
@@ -181,20 +188,52 @@ hr {
   align-self: center;
 }
 
-  /* Scrollytelling */
-.reveal {
+/* ── Scrollytelling ──────────────────────────────────────────────── */
+
+/* Section headings — slide in from left */
+.reveal-heading {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateX(-24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal-heading.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
+/* Cards — three entrance styles */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
 .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Fade up (default) */
+.reveal-fade        { transform: translateY(24px); }
+
+/* Slide from left */
+.reveal-left        { transform: translateX(-32px); }
+
+/* Slide from right */
+.reveal-right       { transform: translateX(32px); }
+
+/* Stagger delays on cards */
+.reveal-delay-1     { transition-delay: 0.08s; }
+.reveal-delay-2     { transition-delay: 0.16s; }
+.reveal-delay-3     { transition-delay: 0.24s; }
+.reveal-delay-4     { transition-delay: 0.32s; }
+
+/* Inner text children — fade up after card arrives */
+.reveal-child {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.reveal-child.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
   
