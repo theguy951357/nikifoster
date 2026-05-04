@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Prevent the blank agreement PDF from being indexed
+Disallow: /documents/
+
+Sitemap: https://nikifosterlaw.com/sitemap.xml
