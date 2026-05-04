@@ -1,0 +1,33 @@
+<svg width="100%" height="500em" viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Foster for the People — Law Office of Niki Foster logo with F lettermark</title>
+  <desc>Bold F lettermark in vibrant palette alongside Law Office of Niki Foster and tagline</desc>
+
+  <style>
+    .name { font-family: Georgia, 'Times New Roman', serif; font-size: 38px; font-weight: 700; fill: #7209b7; }
+    .sub  { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 400; fill: #7209b7; letter-spacing: 3px; }
+    .tag  { font-family: Georgia, 'Times New Roman', serif; font-size: 16px; font-weight: 700; fill: #f72585; letter-spacing: 2px; }
+    .ltr  { font-family: Georgia, 'Times New Roman', serif; font-size: 112px; font-weight: 700; fill: #ffffff; }
+  </style>
+
+  <!-- Layered squares -->
+  <rect x="48" y="58" width="130" height="180" rx="6" fill="#4cc9f0"/>
+  <rect x="58" y="68" width="130" height="180" rx="6" fill="#3a0ca3"/>
+  <rect x="68" y="78" width="130" height="180" rx="6" fill="#7209b7"/>
+  <!-- Pink left accent bar -->
+  <rect x="68" y="78" width="16" height="180" rx="4" fill="#f72585"/>
+
+  <!-- F letterform -->
+  <text x="110" y="185" class="ltr">F</text>
+
+  <!-- Divider -->
+  <line x1="216" y1="62" x2="216" y2="244" stroke="#c0b8e8" stroke-width="1"/>
+
+  <!-- Text block -->
+  <text x="238" y="130" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; fill: #4361ee; letter-spacing: 3px;">LAW OFFICE OF</text>
+  <text x="236" y="178" class="name">Niki Foster</text>
+
+  <!-- Tagline -->
+  <text x="236" y="209" class="tag">Foster for the People</text>
+  <text x="238" y="230" style="font-family: Arial, Helvetica, sans-serif; font-size: 8px; font-weight: 700; fill: #4cc9f0; letter-spacing: 3px;">ASHEVILLE, NORTH CAROLINA</text>
+
+</svg>
