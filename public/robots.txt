@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /documents/
+Disallow: /admin.html
 
-# Social sharing crawlers — full access for link preview generation
 User-agent: facebookexternalhit
 Allow: /
 

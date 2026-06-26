@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Admin — Law Office of Niki Foster</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="images/foster_law_logo_large.svg">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body { font-family: Arial, Helvetica, sans-serif; background: #f4f0fb; color: #1a1a1a; min-height: 100vh; }
+
+    /* ── Login ── */
+    #login-screen { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; }
+    .login-box { background: #fff; border-radius: 12px; box-shadow: 0 4px 24px rgba(58,12,163,0.12); padding: 2.5rem 2rem; width: 100%; max-width: 420px; }
+    .login-logo { text-align: center; margin-bottom: 1.5rem; }
+    .login-logo svg { width: 180px; }
+    .login-box h1 { font-size: 1.2rem; color: #3a0ca3; text-align: center; margin-bottom: 0.25rem; border: none; padding: 0; }
+    .login-sub { text-align: center; color: #555; font-size: 0.875rem; margin-bottom: 1.75rem; }
+    .login-label { display: block; font-size: 0.85rem; font-weight: 600; color: #3a0ca3; margin-bottom: 0.35rem; margin-top: 1rem; }
+    .login-input { width: 100%; padding: 0.65rem 0.85rem; border: 2px solid #c0b8e8; border-radius: 6px; font-size: 1rem; transition: border-color 0.2s; }
+    .login-input:focus { border-color: #7209b7; outline: none; }
+    .btn-primary { display: block; width: 100%; background: #7209b7; color: #fff; border: none; border-radius: 6px; padding: 0.75rem; font-size: 1rem; font-weight: 600; cursor: pointer; margin-top: 1.25rem; transition: background 0.2s; }
+    .btn-primary:hover { background: #5e0d94; }
+    .btn-primary:disabled { background: #c0b8e8; cursor: default; }
+    .btn-google { display: flex; align-items: center; justify-content: center; gap: 0.6rem; width: 100%; background: #fff; color: #3a0ca3; border: 2px solid #c0b8e8; border-radius: 6px; padding: 0.65rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; margin-top: 0.75rem; transition: border-color 0.2s, background 0.2s; }
+    .btn-google:hover { border-color: #7209b7; background: #f5f0ff; }
+    .login-divider { text-align: center; color: #aaa; font-size: 0.8rem; margin: 1rem 0 0.25rem; }
+    #login-error { color: #a32d2d; font-size: 0.85rem; margin-top: 0.75rem; text-align: center; min-height: 1.2rem; }
+
+    /* ── Admin ── */
+    #admin-screen { display: none; }
+
+    .admin-topbar { background: #3a0ca3; color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.5rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+    .admin-topbar h1 { font-size: 1rem; font-weight: 700; border: none; padding: 0; color: #fff; }
+    .topbar-right { display: flex; align-items: center; gap: 1rem; }
+    #user-email { font-size: 0.8rem; color: #c0b8e8; }
+    .btn-logout { background: transparent; border: 1px solid #c0b8e8; color: #fff; border-radius: 4px; padding: 0.3rem 0.75rem; font-size: 0.8rem; cursor: pointer; transition: background 0.2s; }
+    .btn-logout:hover { background: rgba(255,255,255,0.1); }
+    .preview-link { font-size: 0.8rem; color: #c0b8e8; text-decoration: none; }
+    .preview-link:hover { color: #fff; }
+
+    .status-bar { display: none; padding: 0.75rem 1.5rem; font-size: 0.9rem; font-weight: 500; }
+    .status-info    { background: #e6f1fb; color: #185fa5; display: block !important; }
+    .status-success { background: #eaf3de; color: #3b6d11; display: block !important; }
+    .status-warn    { background: #faeeda; color: #854f0b; display: block !important; }
+    .status-error   { background: #fcebeb; color: #a32d2d; display: block !important; }
+
+    .save-bar { background: #f5f0ff; border-bottom: 1px solid #e0d8f0; padding: 0.75rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .save-bar p { font-size: 0.85rem; color: #555; margin: 0; }
+    #save-btn { background: #c9196d; color: #fff; border: none; border-radius: 6px; padding: 0.65rem 1.75rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+    #save-btn:hover { background: #a8145b; }
+    #save-btn:disabled { background: #c0b8e8; cursor: default; }
+
+    .admin-body { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+    .admin-section { background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(58,12,163,0.07); margin-bottom: 2rem; overflow: hidden; }
+    .admin-section-header { background: #3a0ca3; color: #fff; padding: 0.85rem 1.25rem; display: flex; align-items: center; gap: 0.6rem; }
+    .admin-section-header h2 { font-size: 0.95rem; font-weight: 700; border: none; padding: 0; color: #fff; margin: 0; }
+    .section-icon { font-size: 1rem; }
+    .admin-section-body { padding: 1.25rem; }
+
+    .field-group { margin-bottom: 1.25rem; }
+    .field-group:last-child { margin-bottom: 0; }
+    .field-label { display: block; font-size: 0.8rem; font-weight: 700; color: #3a0ca3; margin-bottom: 0.35rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .field-hint { font-size: 0.75rem; color: #888; margin-bottom: 0.4rem; font-style: italic; }
+    .admin-input, .admin-textarea { width: 100%; padding: 0.6rem 0.85rem; border: 2px solid #e0d8f0; border-radius: 6px; font-size: 0.95rem; font-family: Arial, Helvetica, sans-serif; transition: border-color 0.2s; resize: vertical; line-height: 1.6; }
+    .admin-input:focus, .admin-textarea:focus { border-color: #7209b7; outline: none; }
+
+    /* List editors */
+    .list-editor { margin-top: 0.5rem; }
+    .list-item-row { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; background: #f9f8ff; border: 1px solid #e0d8f0; border-radius: 6px; padding: 0.5rem; }
+    .drag-handle { color: #c0b8e8; font-size: 1.1rem; cursor: grab; padding-top: 0.4rem; flex-shrink: 0; user-select: none; }
+    .list-item-input { flex: 1; padding: 0.4rem 0.6rem; border: 1px solid #e0d8f0; border-radius: 4px; font-size: 0.9rem; font-family: Arial, Helvetica, sans-serif; resize: vertical; line-height: 1.5; }
+    .list-item-input:focus { border-color: #7209b7; outline: none; }
+    .list-remove-btn { background: #fcebeb; color: #a32d2d; border: 1px solid #f5c6c6; border-radius: 4px; padding: 0.3rem 0.6rem; font-size: 0.78rem; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: background 0.15s; }
+    .list-remove-btn:hover { background: #f5c6c6; }
+    .list-add-btn { background: #eaf3de; color: #3b6d11; border: 1px solid #c3dfa0; border-radius: 4px; padding: 0.4rem 0.85rem; font-size: 0.85rem; font-weight: 600; cursor: pointer; margin-top: 0.5rem; transition: background 0.15s; }
+    .list-add-btn:hover { background: #c3dfa0; }
+
+    /* Extra card editors */
+    .extra-cards-container { margin-top: 1rem; }
+    .extra-card-editor { background: #f5f0ff; border: 1px solid #c0b8e8; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+    .extra-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+    .extra-card-label { font-size: 0.85rem; font-weight: 700; color: #3a0ca3; }
+    .extra-card-remove { background: #fcebeb; color: #a32d2d; border: 1px solid #f5c6c6; border-radius: 4px; padding: 0.25rem 0.6rem; font-size: 0.78rem; cursor: pointer; transition: background 0.15s; }
+    .extra-card-remove:hover { background: #f5c6c6; }
+
+    /* Add card button */
+    .add-card-btn { display: flex; align-items: center; gap: 0.4rem; background: #f5f0ff; color: #3a0ca3; border: 2px dashed #c0b8e8; border-radius: 8px; padding: 0.65rem 1.25rem; font-size: 0.9rem; font-weight: 600; cursor: pointer; width: 100%; justify-content: center; margin-top: 0.75rem; transition: background 0.15s, border-color 0.15s; }
+    .add-card-btn:hover { background: #ede8fb; border-color: #7209b7; }
+
+    /* Section divider */
+    .section-divider { height: 1px; background: #e0d8f0; margin: 1.5rem 0; }
+
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .bottom-save { text-align: center; margin-top: 1rem; }
+    .btn-save-bottom { background: #c9196d; color: #fff; border: none; border-radius: 6px; padding: 0.85rem 3rem; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+    .btn-save-bottom:hover { background: #a8145b; }
+
+    @media (max-width: 600px) {
+      .field-grid { grid-template-columns: 1fr; }
+      .admin-topbar h1 { font-size: 0.85rem; }
+      #user-email { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Login -->
+<div id="login-screen">
+  <div class="login-box">
+    <div class="login-logo">
+      <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="90" height="90" rx="5" fill="#4cc9f0"/>
+        <rect x="20" y="20" width="90" height="90" rx="5" fill="#3a0ca3"/>
+        <rect x="30" y="30" width="90" height="90" rx="5" fill="#7209b7"/>
+        <rect x="30" y="30" width="11" height="90" rx="3" fill="#f72585"/>
+        <text x="62" y="100" style="font-family:Georgia,serif;font-size:72px;font-weight:700;fill:#ffffff;">F</text>
+        <text x="132" y="70" style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;fill:#4361ee;letter-spacing:2px;">LAW OFFICE OF</text>
+        <text x="130" y="95" style="font-family:Georgia,serif;font-size:26px;font-weight:700;fill:#7209b7;">Niki Foster</text>
+      </svg>
+    </div>
+    <h1>Website Admin</h1>
+    <p class="login-sub">Sign in to edit your website content</p>
+    <form id="login-email-form">
+      <label class="login-label" for="login-email">Email address</label>
+      <input class="login-input" type="email" id="login-email" placeholder="your@email.com" required autocomplete="email">
+      <label class="login-label" for="login-password">Password</label>
+      <input class="login-input" type="password" id="login-password" placeholder="••••••••" required autocomplete="current-password">
+      <button class="btn-primary" type="submit" id="login-email-btn">Sign In</button>
+    </form>
+    <div class="login-divider">— or —</div>
+    <button class="btn-google" id="login-google-btn">
+      <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      Sign in with Google
+    </button>
+    <div id="login-error"></div>
+  </div>
+</div>
+
+<!-- Admin -->
+<div id="admin-screen">
+
+  <div class="admin-topbar">
+    <h1>⚖️ Law Office of Niki Foster — Website Admin</h1>
+    <div class="topbar-right">
+      <span id="user-email"></span>
+      <a href="index.html" class="preview-link" target="_blank">View Site ↗</a>
+      <button class="btn-logout" id="logout-btn">Sign Out</button>
+    </div>
+  </div>
+
+  <div id="status-bar" class="status-bar"></div>
+
+  <div class="save-bar">
+    <p>Make your changes below, then click <strong>Save All Changes</strong> to update your website instantly.</p>
+    <button id="save-btn">Save All Changes</button>
+  </div>
+
+  <div class="admin-body">
+
+    <!-- HERO -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">🏠</span><h2>Hero — Top of Page</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-hero_tagline_main">Main tagline (large text)</label>
+          <input class="admin-input" type="text" id="field-hero_tagline_main">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-hero_tagline_sub">Sub tagline (smaller text below)</label>
+          <input class="admin-input" type="text" id="field-hero_tagline_sub">
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES INTRO -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">⚖️</span><h2>Legal Services — Introduction</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-services_intro_1">Opening sentence</label>
+          <textarea class="admin-textarea" id="field-services_intro_1" rows="2"></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-services_intro_2">Limited scope description</label>
+          <p class="field-hint">You can use &lt;strong&gt;bold&lt;/strong&gt; and &lt;em&gt;italic&lt;/em&gt; formatting.</p>
+          <textarea class="admin-textarea" id="field-services_intro_2" rows="4"></textarea>
+        </div>
+        <div class="section-divider"></div>
+        <div class="extra-cards-container" id="extra-cards-admin-services"></div>
+        <button class="add-card-btn" data-section="services">＋ Add a Card to Legal Services</button>
+      </div>
+    </div>
+
+    <!-- DIRECT REP -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">🏛️</span><h2>Direct Representation — Asheville / Western NC</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-direct_rep_heading">Section heading</label>
+          <input class="admin-input" type="text" id="field-direct_rep_heading">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-direct_rep_body_1">Paragraph 1</label>
+          <textarea class="admin-textarea" id="field-direct_rep_body_1" rows="3"></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-direct_rep_body_2">Paragraph 2 — traffic tickets / remote handling</label>
+          <textarea class="admin-textarea" id="field-direct_rep_body_2" rows="4"></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-direct_rep_body_3">Paragraph 3 — values statement</label>
+          <textarea class="admin-textarea" id="field-direct_rep_body_3" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT IS LIMITED SCOPE -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">📋</span><h2>What is Limited Scope Representation?</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-limited_scope_heading">Heading</label>
+          <input class="admin-input" type="text" id="field-limited_scope_heading">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-limited_scope_body">Body text</label>
+          <textarea class="admin-textarea" id="field-limited_scope_body" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHO SHOULD CONSIDER -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">👥</span><h2>Who Should Consider Limited Scope Representation?</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-who_heading">Heading</label>
+          <input class="admin-input" type="text" id="field-who_heading">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-who_body">Body text</label>
+          <p class="field-hint">Use &lt;em&gt;pro se&lt;/em&gt; to italicize "pro se".</p>
+          <textarea class="admin-textarea" id="field-who_body" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- I CAN ASSIST WITH -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">✅</span><h2>I Can Assist With — List</h2></div>
+      <div class="admin-section-body">
+        <p class="field-hint" style="margin-bottom:0.75rem;">Add, remove, or edit items. Drag ⠿ to reorder.</p>
+        <div class="list-editor" id="assist-list-editor"></div>
+        <button class="list-add-btn" data-target="assist-list-editor">+ Add Item</button>
+      </div>
+    </div>
+
+    <!-- AI DRAFTING -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">🤖</span><h2>Using AI to Draft Legal Documents</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-ai_heading">Heading</label>
+          <input class="admin-input" type="text" id="field-ai_heading">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-ai_body">Body text</label>
+          <textarea class="admin-textarea" id="field-ai_body" rows="4"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRACTICE AREAS -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">📁</span><h2>Practice Areas — List</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-practice_areas_intro">Intro sentence above the list</label>
+          <input class="admin-input" type="text" id="field-practice_areas_intro">
+        </div>
+        <p class="field-hint" style="margin-bottom:0.75rem;">Add, remove, or edit practice areas. Drag ⠿ to reorder.</p>
+        <div class="list-editor" id="practice-list-editor"></div>
+        <button class="list-add-btn" data-target="practice-list-editor">+ Add Practice Area</button>
+      </div>
+    </div>
+
+    <!-- WHY I BUILT THIS -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">💡</span><h2>Why I Built This Practice</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-why_heading">Heading</label>
+          <input class="admin-input" type="text" id="field-why_heading">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-why_body">Body text</label>
+          <textarea class="admin-textarea" id="field-why_body" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- NC ONLY -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">🗺️</span><h2>North Carolina Only</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-nc_only_heading">Heading</label>
+          <input class="admin-input" type="text" id="field-nc_only_heading">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-nc_only_body">Body text</label>
+          <textarea class="admin-textarea" id="field-nc_only_body" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">🔄</span><h2>How It Works</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-how_clients_heading">Card 1 — Heading</label>
+          <input class="admin-input" type="text" id="field-how_clients_heading">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-how_clients_body">Card 1 — Body text</label>
+          <textarea class="admin-textarea" id="field-how_clients_body" rows="3"></textarea>
+        </div>
+        <div class="section-divider"></div>
+        <div class="field-group">
+          <label class="field-label" for="field-intake_heading">Card 2 — Intake Process Heading</label>
+          <input class="admin-input" type="text" id="field-intake_heading">
+        </div>
+        <p class="field-hint" style="margin-bottom:0.75rem;">Edit the intake steps below.</p>
+        <div class="list-editor" id="intake-list-editor"></div>
+        <button class="list-add-btn" data-target="intake-list-editor">+ Add Step</button>
+        <div class="section-divider"></div>
+        <div class="field-group">
+          <label class="field-label" for="field-considerations_heading">Card 3 — Important Considerations Heading</label>
+          <input class="admin-input" type="text" id="field-considerations_heading">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-considerations_body">Card 3 — Body text</label>
+          <textarea class="admin-textarea" id="field-considerations_body" rows="4"></textarea>
+        </div>
+        <div class="section-divider"></div>
+        <div class="extra-cards-container" id="extra-cards-admin-how_it_works"></div>
+        <button class="add-card-btn" data-section="how_it_works">＋ Add a Card to How It Works</button>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">👩‍⚖️</span><h2>About Niki Foster</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-about_p1">Paragraph 1 — UNC / Law School</label>
+          <textarea class="admin-textarea" id="field-about_p1" rows="4"></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-about_p2">Paragraph 2 — Staff Attorney / Pro Se Law Clerk</label>
+          <p class="field-hint">Use &lt;em&gt;Pro Se&lt;/em&gt; to italicize.</p>
+          <textarea class="admin-textarea" id="field-about_p2" rows="4"></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-about_p3">Paragraph 3 — NORML / Occupy / Piland</label>
+          <textarea class="admin-textarea" id="field-about_p3" rows="4"></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-about_p4">Paragraph 4 — MFA / Pandemic / Memoir</label>
+          <textarea class="admin-textarea" id="field-about_p4" rows="4"></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-about_p5">Paragraph 5 — Asheville / Community / Poetry</label>
+          <textarea class="admin-textarea" id="field-about_p5" rows="4"></textarea>
+        </div>
+        <div class="section-divider"></div>
+        <div class="extra-cards-container" id="extra-cards-admin-about"></div>
+        <button class="add-card-btn" data-section="about">＋ Add a Card to About</button>
+      </div>
+    </div>
+
+    <!-- BOOK -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">📖</span><h2>Book Section</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-book_text">Book section text</label>
+          <p class="field-hint">Currently shows "Coming Soon". Update this when the book is ready to announce.</p>
+          <textarea class="admin-textarea" id="field-book_text" rows="3"></textarea>
+        </div>
+        <div class="section-divider"></div>
+        <div class="extra-cards-container" id="extra-cards-admin-book"></div>
+        <button class="add-card-btn" data-section="book">＋ Add a Card to Book</button>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="admin-section">
+      <div class="admin-section-header"><span class="section-icon">📬</span><h2>Contact Information</h2></div>
+      <div class="admin-section-body">
+        <div class="field-group">
+          <label class="field-label" for="field-contact_intro">Intro paragraph</label>
+          <textarea class="admin-textarea" id="field-contact_intro" rows="3"></textarea>
+        </div>
+        <div class="field-grid">
+          <div class="field-group">
+            <label class="field-label" for="field-contact_name">Business name</label>
+            <input class="admin-input" type="text" id="field-contact_name">
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="field-contact_email">Email address</label>
+            <input class="admin-input" type="email" id="field-contact_email">
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="field-contact_phone">Phone (display)</label>
+            <p class="field-hint">Example: (828) 407-6588</p>
+            <input class="admin-input" type="text" id="field-contact_phone">
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="field-contact_phone_raw">Phone (for dialing)</label>
+            <p class="field-hint">Example: +18284076588</p>
+            <input class="admin-input" type="text" id="field-contact_phone_raw">
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="field-contact_address">Mailing address</label>
+          <p class="field-hint">Put each line on a new line.</p>
+          <textarea class="admin-textarea" id="field-contact_address" rows="3"></textarea>
+        </div>
+        <div class="section-divider"></div>
+        <div class="extra-cards-container" id="extra-cards-admin-contact"></div>
+        <button class="add-card-btn" data-section="contact">＋ Add a Card to Contact</button>
+      </div>
+    </div>
+
+    <div class="bottom-save">
+      <button class="btn-save-bottom" onclick="document.getElementById('save-btn').click()">Save All Changes</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="/__/firebase/11.10.0/firebase-app-compat.js"></script>
+<script src="/__/firebase/11.10.0/firebase-auth-compat.js"></script>
+<script src="/__/firebase/11.10.0/firebase-database-compat.js"></script>
+<script src="/__/firebase/init.js?useEmulator=true"></script>
+<script src="scripts/admin.js"></script>
+
+</body>
+</html>
