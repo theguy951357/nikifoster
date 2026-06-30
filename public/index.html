@@ -9,20 +9,20 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nikifoster.com/">
 
-    <!-- Open Graph — controls appearance when shared on Facebook etc. -->
+    <!-- Open Graph -->
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="https://nikifoster.com/">
     <meta property="og:title"       content="Law Office of Niki Foster | Limited Scope Representation | North Carolina">
     <meta property="og:description" content="Focused legal help for North Carolina without the large retainer. Limited scope representation, flat fee, no hourly billing.">
     <meta property="og:image"       content="https://nikifoster.com/images/og-image.png">
-    <meta property="og:image:alt" content="Law Office of Niki Foster logo, Limited Scope Representation, Asheville, North Carolina">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Law Office of Niki Foster | Limited Scope Representation | North Carolina">
+    <meta property="og:image:alt"   content="Law Office of Niki Foster logo, Limited Scope Representation, Asheville, North Carolina">
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Law Office of Niki Foster | Limited Scope Representation | North Carolina">
     <meta name="twitter:description" content="Focused legal help for North Carolina without the large retainer. Flat fee, no hourly billing.">
-    <meta name="twitter:image" content="https://nikifoster.com/images/og-image.png">
-    <meta name="twitter:image:alt" content="Law Office of Niki Foster logo — Limited Scope Representation, Asheville, North Carolina">
+    <meta name="twitter:image"       content="https://nikifoster.com/images/og-image.png">
+    <meta name="twitter:image:alt"   content="Law Office of Niki Foster logo, Limited Scope Representation, Asheville, North Carolina">
 
-    <!-- Schema.org structured data — powers Google Knowledge Panel and local rich results -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,24 +40,13 @@
         "postalCode": "28802",
         "addressCountry": "US"
       },
-      "areaServed": {
-        "@type": "State",
-        "name": "North Carolina"
-      },
+      "areaServed": { "@type": "State", "name": "North Carolina" },
       "priceRange": "Flat fee, no hourly billing",
       "knowsAbout": [
-        "Limited scope representation",
-        "Unbundled legal services",
-        "Pro se litigation support",
-        "Civil litigation",
-        "Landlord-tenant disputes",
-        "Contract disputes",
-        "Divorce and separation",
-        "Criminal defense",
-        "DUI / DWI",
-        "Criminal appeals",
-        "Post-conviction relief",
-        "Expungements"
+        "Limited scope representation","Unbundled legal services","Pro se litigation support",
+        "Civil litigation","Landlord-tenant disputes","Contract disputes","Divorce and separation",
+        "Criminal defense","DUI / DWI","Criminal appeals","Post-conviction relief","Expungements",
+        "Traffic tickets Buncombe County","Direct representation Western North Carolina"
       ],
       "sameAs": ["https://www.facebook.com/JenniferNicoleFosterEsq"]
     }
@@ -73,54 +62,27 @@
     <link rel="stylesheet" href="css/w3.css" />
 
     <style>
-      /* ── Logo animation keyframes ────────────────────────────────── */
-
-      /* Default — visible instantly for reduced-motion users */
       #logo-layer-1, #logo-layer-2, #logo-layer-3,
       #logo-accent, #logo-f, #logo-divider,
       #logo-sub, #logo-name, #logo-tag, #logo-location,
-      .hero-tagline {
-        opacity: 1;
-      }
+      .hero-tagline { opacity: 1; }
 
       @media (prefers-reduced-motion: no-preference) {
-
-        @keyframes layerDrop {
-          0%   { opacity: 0; transform: translateY(-18px); }
-          60%  { transform: translateY(4px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes accentWipe {
-          0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
-          100% { opacity: 1; transform: scaleY(1); transform-origin: top; }
-        }
-        @keyframes letterRise {
-          0%   { opacity: 0; transform: translateY(14px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes dividerGrow {
-          0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
-          100% { opacity: 1; transform: scaleY(1); transform-origin: top; }
-        }
-        @keyframes textFadeUp {
-          0%   { opacity: 0; transform: translateY(10px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes taglineFade {
-          0%   { opacity: 0; }
-          100% { opacity: 1; }
-        }
+        @keyframes layerDrop  { 0%{opacity:0;transform:translateY(-18px)}60%{transform:translateY(4px)}100%{opacity:1;transform:translateY(0)} }
+        @keyframes accentWipe { 0%{opacity:0;transform:scaleY(0);transform-origin:top}100%{opacity:1;transform:scaleY(1);transform-origin:top} }
+        @keyframes letterRise { 0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)} }
+        @keyframes dividerGrow{ 0%{opacity:0;transform:scaleY(0);transform-origin:top}100%{opacity:1;transform:scaleY(1);transform-origin:top} }
+        @keyframes textFadeUp { 0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:translateY(0)} }
+        @keyframes taglineFade{ 0%{opacity:0}100%{opacity:1} }
 
         #logo-layer-1, #logo-layer-2, #logo-layer-3,
         #logo-accent, #logo-f, #logo-divider,
         #logo-sub, #logo-name, #logo-tag, #logo-location,
-        .hero-tagline {
-          opacity: 0;
-        }
+        .hero-tagline { opacity: 0; }
 
-        #logo-layer-1 { animation: layerDrop  0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 0.10s forwards; }
-        #logo-layer-2 { animation: layerDrop  0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s forwards; }
-        #logo-layer-3 { animation: layerDrop  0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 0.40s forwards; }
+        #logo-layer-1 { animation: layerDrop  0.45s cubic-bezier(0.34,1.56,0.64,1) 0.10s forwards; }
+        #logo-layer-2 { animation: layerDrop  0.45s cubic-bezier(0.34,1.56,0.64,1) 0.25s forwards; }
+        #logo-layer-3 { animation: layerDrop  0.45s cubic-bezier(0.34,1.56,0.64,1) 0.40s forwards; }
         #logo-accent  { animation: accentWipe 0.35s ease-out 0.62s forwards; }
         #logo-f       { animation: letterRise 0.40s ease-out 0.82s forwards; }
         #logo-divider { animation: dividerGrow 0.30s ease-out 1.00s forwards; }
@@ -131,32 +93,9 @@
         .hero-tagline { animation: taglineFade 0.50s ease-out 1.80s forwards; }
       }
 
-      .hero-tagline {
-        color: var(--indigo);
-        font-size: 1.1rem;
-        margin-top: 1rem;
-        font-weight: 600;
-      }
-
-      .hero-logo-svg {
-        max-width: 680px;
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-      }
-
-      /* Screen-reader only — invisible to sighted users, indexed by Google */
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0,0,0,0);
-        white-space: nowrap;
-        border: 0;
-      }
+      .hero-tagline { color: var(--indigo); font-size: 1.1rem; margin-top: 1rem; font-weight: 600; }
+      .hero-logo-svg { max-width: 680px; width: 100%; display: block; margin: 0 auto; }
+      .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
     </style>
 
     <script defer src="/__/firebase/11.10.0/firebase-app-compat.js"></script>
@@ -174,7 +113,7 @@
     <div id="pdf-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="pdf-modal-box">
         <div class="pdf-modal-header">
-          <h4 id="modal-title">Limited Scope Representation Attorney Client Agreement</h3>
+          <h4 id="modal-title">Limited Scope Representation Attorney Client Agreement</h4>
           <button id="pdf-close" class="pdf-modal-close" aria-label="Close">&times;</button>
         </div>
         <div class="pdf-canvas-wrap"></div>
@@ -189,18 +128,17 @@
       <div class="w3-bar w3-white w3-wide w3-padding w3-card">
         <a href="#home" class="w3-bar-item w3-button"><b>Home</b></a>
         <div class="w3-right w3-hide-small">
-          <a href="#services" class="w3-bar-item w3-button">Services</a>
+          <a href="#services"     class="w3-bar-item w3-button">Services</a>
           <a href="#how-it-works" class="w3-bar-item w3-button">How It Works</a>
-          <a href="#about" class="w3-bar-item w3-button">About</a>
-          <a href="#book" class="w3-bar-item w3-button">Book</a>
-          <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+          <a href="#about"        class="w3-bar-item w3-button">About</a>
+          <a href="#book"         class="w3-bar-item w3-button">Book</a>
+          <a href="#contact"      class="w3-bar-item w3-button">Contact</a>
         </div>
       </div>
     </div>
 
-    <!-- Hero — inline animated SVG -->
+    <!-- Hero -->
     <section class="hero" id="home">
-      <!-- Hidden h1 for SEO — invisible to visitors, read by Google and screen readers -->
       <h1 class="sr-only">Law Office of Niki Foster, Limited Scope Representation, Asheville, North Carolina</h1>
       <svg class="hero-logo-svg" viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Law Office of Niki Foster logo">
         <style>
@@ -208,21 +146,17 @@
           .name { font-family: Georgia, 'Times New Roman', serif; font-size: 58px;  font-weight: 700; fill: #7209b7; }
           .tag  { font-family: Georgia, 'Times New Roman', serif; font-size: 24px;  font-weight: 700; fill: #c9196d; letter-spacing: 2px; }
         </style>
-
         <rect id="logo-layer-1" x="48"  y="58"  width="130" height="180" rx="6" fill="#4cc9f0"/>
         <rect id="logo-layer-2" x="58"  y="68"  width="130" height="180" rx="6" fill="#3a0ca3"/>
         <rect id="logo-layer-3" x="68"  y="78"  width="130" height="180" rx="6" fill="#7209b7"/>
         <rect id="logo-accent"  x="68"  y="78"  width="16"  height="180" rx="4" fill="#f72585"/>
         <text id="logo-f"       x="110" y="185" class="ltr">F</text>
-
         <line id="logo-divider" x1="216" y1="62" x2="216" y2="244" stroke="#c0b8e8" stroke-width="1"/>
-
         <text id="logo-sub"      x="238" y="115" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;fill:#4361ee;letter-spacing:3px;">LAW OFFICE OF</text>
         <text id="logo-name"     x="234" y="175" class="name">Niki Foster</text>
         <text id="logo-tag"      x="234" y="215" class="tag">Foster for the People</text>
         <text id="logo-location" x="238" y="242" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;fill:#3a0ca3;letter-spacing:3px;">ASHEVILLE, NORTH CAROLINA</text>
       </svg>
-
       <p class="hero-tagline">
         <span style="display:block; font-size: 1.2rem; font-weight: 700; color: var(--purple);">Limited Scope Representation</span>
         <span style="display:block;">Focused legal help for North Carolina without the large retainer.</span>
@@ -232,26 +166,34 @@
     <!-- Page content -->
     <div class="w3-content w3-padding" style="max-width:1564px">
 
-      <!-- Services Section -->
+      <!-- Services -->
       <div class="w3-container w3-padding-32" id="services">
         <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 reveal-heading">Legal Services</h2>
 
-        <!-- Intro card — "targeted" changed to "focused" -->
+        <!-- Intro card -->
         <div class="card reveal reveal-fade">
           <p class="reveal-child">If you have a North Carolina legal matter and are looking for an alternative to high-priced law firms, you've come to the right place.</p>
           <p class="reveal-child">My practice focuses on <strong>limited scope representation</strong>, a growing model where clients and attorneys contract to limit the attorney's involvement to specific tasks or phases of a case. Instead of billing by the hour, I charge a reasonable flat fee determined on a case-by-case basis. You get focused, professional legal support without paying for full representation.</p>
         </div>
 
-        <!-- What is limited scope -->
+        <!-- Direct representation — own card -->
         <div class="card reveal reveal-left reveal-delay-1">
+          <h3 class="reveal-child">Direct Representation in Asheville/Buncombe County and Western North Carolina</h3>
+          <p class="reveal-child">In addition to limited scope assistance available to clients across North Carolina, I offer full direct representation in the courts of Western North Carolina, with a primary focus on Buncombe, Madison, and Haywood Counties, and the surrounding region on a case-by-case basis.</p>
+          <p class="reveal-child">If you are dealing with a traffic ticket, misdemeanor charge, small claims matter, including landlord-tenant, or a civil dispute in district court, I can appear alongside you, handle the courtroom, and see your case through from beginning to end. For many routine traffic and speeding tickets, particularly in Buncombe County, I can often handle the matter remotely on your behalf, without you ever needing to take time off work or set foot in a courtroom.</p>
+          <p class="reveal-child">My direct representation practice is built around the same values as my limited scope work: flat fees, honest communication, and practical legal help for real people.</p>
+        </div>
+
+        <!-- What is limited scope -->
+        <div class="card reveal reveal-right reveal-delay-2">
           <h3 class="reveal-child">What is limited scope representation?</h3>
           <p class="reveal-child">
             Limited scope legal services means your attorney handles only the parts of your case you choose. North Carolina State Bar rules permit attorneys to limit their representation when it is reasonable and you give informed consent. In my practice, this means I provide legal drafting, research, and strategy support, but I do not appear in court on your behalf or become the attorney of record. You stay in control of your case.
           </p>
         </div>
 
-        <!-- MOVED UP: Who should consider, renamed, pro se italicized -->
-        <div class="card reveal reveal-right reveal-delay-2">
+        <!-- Who should consider -->
+        <div class="card reveal reveal-fade reveal-delay-1">
           <h3 class="reveal-child">Who Should Consider Limited Scope Representation?</h3>
           <p class="reveal-child">
             This model is well-suited for people who are representing themselves (<em>pro se</em>) and need legal guidance or drafting support, want help drafting or reviewing court filings, including AI-assisted documents, need strategy advice without hiring full counsel, cannot afford full representation, or only need a lawyer for a specific phase of their case. Limited scope representation works best for individuals who have some familiarity with the legal system and are comfortable presenting oral arguments in court. It may not be appropriate in every situation, the right fit must be assessed on a case-by-case basis.
@@ -259,12 +201,12 @@
         </div>
 
         <!-- I can assist with -->
-        <div class="card reveal reveal-fade reveal-delay-1">
+        <div class="card reveal reveal-left reveal-delay-2">
           <div style="flex:1">
             <h3 class="reveal-child">I can assist with:</h3>
             <ul class="service-list">
               <li class="reveal-child">Drafting complaints, answers, and counterclaims</li>
-              <li class="reveal-child">Ghostwriting pleadings for <em>pro se</em> parties including motions and responses</li>
+              <li class="reveal-child">Ghostwriting motions and responses for <em>pro se</em> parties</li>
               <li class="reveal-child">Legal research and case strategy</li>
               <li class="reveal-child">Drafting and responding to discovery requests, with proper objections</li>
               <li class="reveal-child">Reviewing court documents before filing</li>
@@ -276,7 +218,7 @@
         </div>
 
         <!-- AI drafting -->
-        <div class="card reveal reveal-left reveal-delay-2">
+        <div class="card reveal reveal-right reveal-delay-3">
           <h3 class="reveal-child">Using AI to draft legal documents?</h3>
           <p class="reveal-child">
             Limited scope representation is an ideal fit for clients who have used AI tools to draft legal pleadings, motions, or other documents and want an attorney to review the work for legal accuracy, proper formatting, and jurisdiction-specific requirements before filing. AI can be a powerful starting point. Attorney review helps ensure the final product is sound.
@@ -284,16 +226,16 @@
         </div>
 
         <!-- Practice areas -->
-        <div class="card reveal reveal-right reveal-delay-3">
+        <div class="card reveal reveal-fade reveal-delay-1">
           <div style="flex:1">
             <h3 class="reveal-child">Practice areas</h3>
-            <p class="reveal-child">I handle limited scope matters in the following areas of North Carolina law:</p>
+            <p class="reveal-child">I handle the following areas of North Carolina law:</p>
             <ul class="service-list">
               <li class="reveal-child">Civil litigation, drafting and strategy support</li>
               <li class="reveal-child">Landlord-tenant disputes</li>
               <li class="reveal-child">Contract disputes</li>
               <li class="reveal-child">Divorce and separation</li>
-              <li class="reveal-child">Criminal defense (misdemeanors and felonies)</li>
+              <li class="reveal-child">Criminal defense, misdemeanors</li>
               <li class="reveal-child">Traffic offenses</li>
               <li class="reveal-child">DUI / DWI</li>
               <li class="reveal-child">Criminal appeals and post-conviction (appellate briefing, MAR, habeas)</li>
@@ -303,7 +245,7 @@
         </div>
 
         <!-- Why I built this -->
-        <div class="card reveal reveal-fade reveal-delay-1">
+        <div class="card reveal reveal-left reveal-delay-2">
           <h3 class="reveal-child">Why I built this practice</h3>
           <p class="reveal-child">
             I have always been passionate about helping everyday people access the legal system. <em>Pro se</em> litigants, individuals representing themselves in court, deserve greater access to professional guidance than current practice typically allows. One of the challenges in the legal profession is that law schools spend three years training attorneys to think and speak like lawyers, creating a professional class that can feel removed from everyday society. In reality, there is much that people can do for themselves in court, particularly with an attorney supporting them behind the scenes. Limited scope representation bridges that gap.
@@ -311,14 +253,14 @@
         </div>
 
         <!-- NC only -->
-        <div class="card reveal reveal-left reveal-delay-2">
+        <div class="card reveal reveal-right reveal-delay-3">
           <h3 class="reveal-child">North Carolina only</h3>
           <p class="reveal-child">
             My practice is limited to North Carolina. I am licensed to practice law in North Carolina only. If your legal matter arises under the laws of another state, Virginia, Tennessee, South Carolina, or anywhere else, I am not able to assist you, and you will need to find an attorney licensed in that state.
           </p>
         </div>
 
-        <!-- SEO keyword block — styled as a subtle footnote, indexed by Google -->
+        <!-- SEO keyword block -->
         <div class="card reveal reveal-fade" style="background: #f9f9f9; border-left-color: #c0b8e8;">
           <div style="flex:1">
             <p style="font-size:0.8rem; color: var(--text-muted); line-height: 1.9; margin:0;">
@@ -327,7 +269,9 @@
               <em>pro se</em> litigation support North Carolina &middot; ghostwriting pleadings North Carolina &middot;
               civil litigation drafting for <em>pro se</em> parties &middot; help drafting motion North Carolina &middot;
               lawyer to review court documents North Carolina &middot; appellate briefing support North Carolina &middot;
-              AI legal document review attorney North Carolina &middot; attorney review AI drafted pleadings
+              AI legal document review attorney North Carolina &middot; attorney review AI drafted pleadings &middot;
+              traffic ticket attorney Buncombe County &middot; traffic lawyer Asheville NC &middot;
+              direct representation Western North Carolina
             </p>
           </div>
         </div>
@@ -335,7 +279,7 @@
 
       <div class="parallax"></div>
 
-      <!-- How It Works Section -->
+      <!-- How It Works -->
       <div class="w3-container w3-padding-32" id="how-it-works">
         <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 reveal-heading">How It Works</h2>
 
@@ -379,24 +323,22 @@
 
       <div class="parallax"></div>
 
-      <!-- About Section — clerkship paragraph merged into first card -->
+      <!-- About -->
       <div class="w3-container w3-padding-32" id="about">
         <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 reveal-heading">About</h2>
 
-        <!-- First card now contains law school + clerkship paragraphs together -->
         <div class="card reveal reveal-right">
           <div style="flex:1">
             <p class="about-paragraph reveal-child">
               I am a North Carolina native, born and raised in the Piedmont. I attended the University of North Carolina at Chapel Hill for both undergraduate and law school, graduating with honors from the law school in 1995, in the top ten percent of my class, a distinction known as Order of the Coif, and as a published member of the North Carolina Law Review.
             </p>
             <p class="about-paragraph reveal-child" style="margin-top: 1rem;">
-              After law school, I served as a Staff Attorney at the federal Eleventh Circuit Court of Appeals in Atlanta and then as a <em>pro se</em> law clerk in the Northern District of California. My early practice focused on death penalty defense, appeals, and post-conviction relief, which expanded over time to include the immigration consequences of criminal convictions and post-conviction relief for non-citizen clients.
+              After law school, I served as a Staff Attorney at the federal Eleventh Circuit Court of Appeals in Atlanta and then as a <em>Pro Se</em> Law Clerk in the Northern District of California. My early practice focused on death penalty defense, appeals, and post-conviction relief, which expanded over time to include the immigration consequences of criminal convictions and post-conviction relief for non-citizen clients.
             </p>
           </div>
           <img src="./images/nikifoster2.jpg" alt="A picture of Niki Foster" class="nikiimage w3-center" width="300" height="400">
         </div>
 
-        <!-- "medical" removed from cannabis case reference -->
         <div class="card reveal reveal-left reveal-delay-1">
           <p class="about-paragraph reveal-child">
             In 2010, I founded the North Carolina chapter of NORML (National Organization for the Reform of Marijuana Laws), and in 2011, I was a leading founder of the Occupy Asheville movement. I have been involved in efforts to overturn several wrongful convictions, most notably that of former physician Gordon Piland of Asheville, who was wrongfully convicted of trafficking opioids based on a loophole in North Carolina law in what was a cannabis case.
@@ -416,7 +358,7 @@
         </div>
       </div>
 
-      <!-- Book Section -->
+      <!-- Book -->
       <div class="w3-container w3-padding-32" id="book">
         <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 reveal-heading">Book</h2>
         <div class="card reveal reveal-fade">
@@ -424,7 +366,7 @@
         </div>
       </div>
 
-      <!-- Contact Section -->
+      <!-- Contact -->
       <div class="w3-container w3-padding-32" id="contact">
         <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 reveal-heading">Contact</h2>
         <div class="card reveal reveal-fade">
@@ -434,7 +376,7 @@
             Post Office Box 1065<br>
             Asheville, NC 28802<br><br>
             <strong>Email (preferred contact):</strong> <a href="mailto:nikifosterlaw@gmail.com">nikifosterlaw@gmail.com</a><br>
-            <strong>Phone:</strong> <a href="tel:+8284076588">(828) 407-6588</a>
+            <strong>Phone:</strong> <a href="tel:+18284076588">(828) 407-6588</a>
           </p>
         </div>
       </div>
@@ -445,11 +387,9 @@
     <footer class="w3-center w3-black w3-padding-16">
       <p>&copy; Law Office of Niki Foster. All rights reserved.</p>
       <a href="https://www.facebook.com/JenniferNicoleFosterEsq"
-         target="_blank"
-         rel="noopener noreferrer"
+         target="_blank" rel="noopener noreferrer"
          aria-label="Niki Foster on Facebook"
-         class="w3-hover-text-pink"
-         style="margin-left: 10px;">
+         class="w3-hover-text-pink" style="margin-left: 10px;">
         <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
       </a>
     </footer>
@@ -466,7 +406,7 @@
             'auth', 'database', 'firestore', 'functions',
             'messaging', 'storage', 'analytics', 'remoteConfig', 'performance',
           ].filter(feature => typeof app[feature] === 'function');
-          console.log(`Firebase SDK loaded with ${features.join(', ')}`);
+          console.log('Firebase SDK loaded with ' + features.join(', '));
         } catch (e) {
           console.error(e);
         }
