@@ -6,18 +6,13 @@
 
 (function () {
 
-  /* ── Default content ─────────────────────────────────────────────
-     Matches the current hardcoded page text exactly.
-     Extra cards added via the admin page are stored as arrays
-     under content.extra_cards.{section} in the database.
-  ─────────────────────────────────────────────────────────────────── */
   window.CMS_DEFAULTS = {
 
     hero_tagline_main: "Limited Scope Representation",
     hero_tagline_sub:  "Focused legal help for North Carolina without the large retainer.",
 
     services_intro_1: "If you have a North Carolina legal matter and are looking for an alternative to high-priced law firms, you've come to the right place.",
-    services_intro_2: "My practice focuses on <strong>limited scope representation</strong> — a growing model where clients and attorneys contract to limit the attorney's involvement to specific tasks or phases of a case. Instead of billing by the hour, I charge a reasonable flat fee determined on a case-by-case basis. You get focused, professional legal support without paying for full representation.",
+    services_intro_2: "My practice focuses on <strong>limited scope representation</strong>, a growing model where clients and attorneys contract to limit the attorney's involvement to specific tasks or phases of a case. Instead of billing by the hour, I charge a reasonable flat fee determined on a case-by-case basis. You get focused, professional legal support without paying for full representation.",
 
     direct_rep_heading: "Direct Representation in Asheville/Buncombe County and Western North Carolina",
     direct_rep_body_1: "In addition to limited scope assistance available to clients across North Carolina, I offer full direct representation in the courts of Western North Carolina, with a primary focus on Buncombe, Madison, and Haywood Counties, and the surrounding region on a case-by-case basis.",
@@ -25,10 +20,10 @@
     direct_rep_body_3: "My direct representation practice is built around the same values as my limited scope work: flat fees, honest communication, and practical legal help for real people.",
 
     limited_scope_heading: "What is limited scope representation?",
-    limited_scope_body: "Limited scope legal services means your attorney handles only the parts of your case you choose. North Carolina State Bar rules permit attorneys to limit their representation when it is reasonable and you give informed consent. In my practice, this means I provide legal drafting, research, and strategy support — but I do not appear in court on your behalf or become the attorney of record. You stay in control of your case.",
+    limited_scope_body: "Limited scope legal services means your attorney handles only the parts of your case you choose. North Carolina State Bar rules permit attorneys to limit their representation when it is reasonable and you give informed consent. In my practice, this means I provide legal drafting, research, and strategy support, but I do not appear in court on your behalf or become the attorney of record. You stay in control of your case.",
 
     who_heading: "Who Should Consider Limited Scope Representation?",
-    who_body: "This model is well-suited for people who are representing themselves (<em>pro se</em>) and need legal guidance or drafting support, want help drafting or reviewing court filings — including AI-assisted documents, need strategy advice without hiring full counsel, cannot afford full representation, or only need a lawyer for a specific phase of their case. Limited scope representation works best for individuals who have some familiarity with the legal system and are comfortable presenting oral arguments in court. It may not be appropriate in every situation — the right fit must be assessed on a case-by-case basis.",
+    who_body: "This model is well-suited for people who are representing themselves (<em>pro se</em>) and need legal guidance or drafting support, want help drafting or reviewing court filings, including AI-assisted documents, need strategy advice without hiring full counsel, cannot afford full representation, or only need a lawyer for a specific phase of their case. Limited scope representation works best for individuals who have some familiarity with the legal system and are comfortable presenting oral arguments in court. It may not be appropriate in every situation, the right fit must be assessed on a case-by-case basis.",
 
     assist_list: [
       "Drafting complaints, answers, and counterclaims",
@@ -42,11 +37,11 @@
     ],
 
     ai_heading: "Using AI to draft legal documents?",
-    ai_body: "Limited scope representation is an ideal fit for clients who have used AI tools to draft legal pleadings, motions, or other documents and want an attorney to review the work for legal accuracy, proper formatting, and jurisdiction-specific requirements before filing. AI can be a powerful starting point — attorney review helps ensure the final product is sound.",
+    ai_body: "Limited scope representation is an ideal fit for clients who have used AI tools to draft legal pleadings, motions, or other documents and want an attorney to review the work for legal accuracy, proper formatting, and jurisdiction-specific requirements before filing. AI can be a powerful starting point. Attorney review helps ensure the final product is sound.",
 
     practice_areas_intro: "I handle the following areas of North Carolina law:",
     practice_areas_list: [
-      "Civil litigation — drafting and strategy support",
+      "Civil litigation, drafting and strategy support",
       "Landlord-tenant disputes",
       "Contract disputes",
       "Divorce and separation",
@@ -58,20 +53,20 @@
     ],
 
     why_heading: "Why I built this practice",
-    why_body: "I have always been passionate about helping everyday people access the legal system. <em>Pro se</em> litigants — individuals representing themselves in court — deserve greater access to professional guidance than current practice typically allows. One of the challenges in the legal profession is that law schools spend three years training attorneys to think and speak like lawyers, creating a professional class that can feel removed from everyday society. In reality, there is much that people can do for themselves in court, particularly with an attorney supporting them behind the scenes. Limited scope representation bridges that gap.",
+    why_body: "I have always been passionate about helping everyday people access the legal system. <em>Pro se</em> litigants, individuals representing themselves in court, deserve greater access to professional guidance than current practice typically allows. One of the challenges in the legal profession is that law schools spend three years training attorneys to think and speak like lawyers, creating a professional class that can feel removed from everyday society. In reality, there is much that people can do for themselves in court, particularly with an attorney supporting them behind the scenes. Limited scope representation bridges that gap.",
 
     nc_only_heading: "North Carolina only",
-    nc_only_body: "My practice is limited to North Carolina. I am licensed to practice law in North Carolina only. If your legal matter arises under the laws of another state — Virginia, Tennessee, South Carolina, or anywhere else — I am not able to assist you, and you will need to find an attorney licensed in that state.",
+    nc_only_body: "My practice is limited to North Carolina. I am licensed to practice law in North Carolina only. If your legal matter arises under the laws of another state, Virginia, Tennessee, South Carolina, or anywhere else, I am not able to assist you, and you will need to find an attorney licensed in that state.",
 
     how_clients_heading: "How I work with clients",
-    how_clients_body: "I run a small, focused practice and give each client individualized attention. Because I don't bill by the hour, I'm not watching the clock — which means I can be genuinely responsive. Email is my preferred method of communication.",
+    how_clients_body: "I run a small, focused practice and give each client individualized attention. Because I don't bill by the hour, I'm not watching the clock, which means I can be genuinely responsive. Email is my preferred method of communication.",
 
     intake_heading: "The intake process",
     intake_list: [
-      "<strong>Initial email</strong> — Send a brief description of your matter to <a href='mailto:nikifosterlaw@gmail.com'>nikifosterlaw@gmail.com</a> so I can run a conflict check before we speak.",
-      "<strong>Free 30-minute consultation</strong> — We discuss your case, identify where legal help is needed, and determine whether limited scope representation is the right fit — at no charge.",
-      "<strong>Scope agreement</strong> — We clearly define what I will and won't handle, confirmed in writing.",
-      "<strong>Flat fee</strong> — You pay only for the agreed services. No hourly billing, no surprises."
+      "<strong>Initial email</strong>: Send a brief description of your matter to <a href='mailto:nikifosterlaw@gmail.com'>nikifosterlaw@gmail.com</a> so I can run a conflict check before we speak.",
+      "<strong>Free 30-minute consultation</strong>: We discuss your case, identify where legal help is needed, and determine whether limited scope representation is the right fit at no charge.",
+      "<strong>Scope agreement</strong>: We clearly define what I will and won't handle, confirmed in writing.",
+      "<strong>Flat fee</strong>: You pay only for the agreed services. No hourly billing, no surprises."
     ],
 
     considerations_heading: "Important considerations",
@@ -80,7 +75,7 @@
     about_p1: "I am a North Carolina native, born and raised in the Piedmont. I attended the University of North Carolina at Chapel Hill for both undergraduate and law school, graduating with honors from the law school in 1995, in the top ten percent of my class, a distinction known as Order of the Coif, and as a published member of the North Carolina Law Review.",
     about_p2: "After law school, I served as a Staff Attorney at the federal Eleventh Circuit Court of Appeals in Atlanta and then as a <em>Pro Se</em> Law Clerk in the Northern District of California. My early practice focused on death penalty defense, appeals, and post-conviction relief, which expanded over time to include the immigration consequences of criminal convictions and post-conviction relief for non-citizen clients.",
     about_p3: "In 2010, I founded the North Carolina chapter of NORML (National Organization for the Reform of Marijuana Laws), and in 2011, I was a leading founder of the Occupy Asheville movement. I have been involved in efforts to overturn several wrongful convictions, most notably that of former physician Gordon Piland of Asheville, who was wrongfully convicted of trafficking opioids based on a loophole in North Carolina law in what was a cannabis case.",
-    about_p4: "When the pandemic brought the world to a halt in 2020, I returned to graduate school and earned an MFA in Creative Writing in 2024 — largely to begin writing a memoir documenting the Piland wrongful conviction. That book is still in progress. Piland eventually got out of prison after more than three years wrongfully behind bars over the age of seventy.",
+    about_p4: "When the pandemic brought the world to a halt in 2020, I returned to graduate school and earned an MFA in Creative Writing in 2024, largely to begin writing a memoir documenting the Piland wrongful conviction. That book is still in progress. Piland eventually got out of prison after more than three years wrongfully behind bars over the age of seventy.",
     about_p5: "I have lived in Asheville and Western North Carolina for more than twenty-five years, including as a child, and I consider it home. I am active in the local community, the music scene, and I am always working to get people out to vote. Because I have taken time away from legal practice to pursue writing and activism, I think of myself as a grounded, well-rounded person first, and an attorney second, or even third. In my spare time, I write political poetry.",
 
     book_text: "<strong>Coming Soon</strong>",
@@ -95,45 +90,43 @@
 
   /* ── Helpers ─────────────────────────────────────────────────────── */
   function set(id, html) {
-    const el = document.getElementById(id);
+    var el = document.getElementById(id);
     if (el) el.innerHTML = html;
   }
 
   function setList(id, items) {
-    const el = document.getElementById(id);
+    var el = document.getElementById(id);
     if (!el) return;
     el.innerHTML = (items || []).map(function (item) {
       return '<li class="reveal-child">' + item + '</li>';
     }).join('');
   }
 
-  /* ── Render extra cards added via admin page ─────────────────────── */
   function renderExtraCards(section, cards) {
-    const container = document.getElementById('extra-cards-' + section);
+    var container = document.getElementById('extra-cards-' + section);
     if (!container) return;
     container.innerHTML = '';
     if (!cards || !cards.length) return;
     cards.forEach(function (card) {
       if (!card || (!card.heading && !card.body)) return;
-      const div = document.createElement('div');
-      div.className = 'card reveal reveal-fade';
+      var div = document.createElement('div');
+      div.className = 'card reveal reveal-fade is-visible';
+      div.style.flexDirection = 'column';
+      div.style.alignItems = 'flex-start';
       div.innerHTML =
-        (card.heading ? '<h3 class="reveal-child">' + card.heading + '</h3>' : '') +
-        (card.body    ? '<p class="reveal-child">'  + card.body    + '</p>' : '');
+        (card.heading ? '<h3 class="reveal-child is-visible">' + card.heading + '</h3>' : '') +
+        (card.body    ? '<p class="reveal-child is-visible">'  + card.body    + '</p>' : '');
       container.appendChild(div);
     });
   }
 
-  /* ── Populate all content from data object ───────────────────────── */
   function populate(data) {
-    const D = window.CMS_DEFAULTS;
-    function v(key) { return (data[key] !== undefined && data[key] !== '') ? data[key] : D[key]; }
-    function vList(key) {
-      return (data[key] && Array.isArray(data[key]) && data[key].length) ? data[key] : D[key];
-    }
+    var D = window.CMS_DEFAULTS;
+    function v(key)     { return (data[key] !== undefined && data[key] !== '') ? data[key] : D[key]; }
+    function vList(key) { return (data[key] && Array.isArray(data[key]) && data[key].length) ? data[key] : D[key]; }
 
-    set('cms-hero-main',  v('hero_tagline_main'));
-    set('cms-hero-sub',   v('hero_tagline_sub'));
+    set('cms-hero-main', v('hero_tagline_main'));
+    set('cms-hero-sub',  v('hero_tagline_sub'));
 
     set('cms-services-intro-1', v('services_intro_1'));
     set('cms-services-intro-2', v('services_intro_2'));
@@ -184,23 +177,19 @@
     set('cms-contact-email',   '<a href="mailto:' + v('contact_email') + '">' + v('contact_email') + '</a>');
     set('cms-contact-phone',   '<a href="tel:'   + v('contact_phone_raw') + '">' + v('contact_phone') + '</a>');
 
-    /* Extra cards */
     var extra = data.extra_cards || {};
     ['services', 'how_it_works', 'about', 'book', 'contact'].forEach(function (section) {
       renderExtraCards(section, extra[section] ? Object.values(extra[section]) : []);
     });
   }
 
-  /* ── Load from Firebase ──────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
-    /* Show defaults immediately */
     populate({});
-
     try {
-      firebase.database().ref('content').once('value').then(function (snapshot) {
+      firebase.database().ref('content').on('value', function (snapshot) {
         var data = snapshot.val();
         if (data) populate(data);
-      }).catch(function (err) {
+      }, function (err) {
         console.warn('CMS: database read failed, using defaults.', err);
       });
     } catch (e) {

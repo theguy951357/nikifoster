@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Site Admin — Law Office of Niki Foster</title>
-  <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="images/foster_law_logo_large.svg">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,7 +46,7 @@
     .status-warn    { background: #faeeda; color: #854f0b; display: block !important; }
     .status-error   { background: #fcebeb; color: #a32d2d; display: block !important; }
 
-    .save-bar { background: #f5f0ff; border-bottom: 1px solid #e0d8f0; padding: 0.75rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .save-bar { background: #f5f0ff; border-bottom: 1px solid #e0d8f0; padding: 0.75rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; position: sticky; top: 56px; z-index: 99; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
     .save-bar p { font-size: 0.85rem; color: #555; margin: 0; }
     #save-btn { background: #c9196d; color: #fff; border: none; border-radius: 6px; padding: 0.65rem 1.75rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
     #save-btn:hover { background: #a8145b; }
